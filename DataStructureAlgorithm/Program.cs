@@ -12,7 +12,7 @@ public class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("\nEnter a option \n1.BinarySearch \n2.Anagram\n3.ReplaceString\n4.insertionsortn\n5.BubbleeSort\n6.PrimeNumber\n7.unordered\n8.Exit");
+            Console.WriteLine("\nEnter a option \n1.BinarySearch \n2.Anagram\n3.ReplaceString\n4.insertionsortn\n5.BubbleeSort\n6.PrimeNumber\n7.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -48,11 +48,7 @@ public class Program
                         primeNumbers.PrimeNumbersBetweenTheRange(i);
                     } 
                     break;
-                 case 7:
-                    Opertion unorderListProblem = new Opertion();
-                    unorderListProblem.ReadFileAndPerformOperation(unOrderedPath);
-                    break;
-                case 8:
+                case 7:
                     flag = false;
                     break;
             }
