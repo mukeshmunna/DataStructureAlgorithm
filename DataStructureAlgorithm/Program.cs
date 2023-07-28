@@ -1,16 +1,18 @@
 ﻿using DataStructureAlgorithm;
+using DataStructureAlgorithm.UnorderedList;
 using DataStructureProblem;
 
 public class Program
 {
     static string searchFilePath = @"D:\Problem statemets\DataStructureAlgorithm\DataStructureAlgorithm\Files\Search.txt";
+    static string unOrderedPath = @"D:\Problem statemets\DataStructureAlgorithm\DataStructureAlgorithm\UnorderedList\UnOrdered.txt";
     public static void Main(string[] args)
     {
         Console.WriteLine("Data Structure\n");
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Enter a option \n1.BinarySearch \n2.Anagram\n3.ReplaceString\n4.insertionsortn\n5.BubbleeSort\n6.Exit");
+            Console.WriteLine("\nEnter a option \n1.BinarySearch \n2.Anagram\n3.ReplaceString\n4.insertionsortn\n5.BubbleeSort\n6.PrimeNumber\n7.unordered\n8.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -38,6 +40,19 @@ public class Program
                     bubbleSort.PrintArray(arr1);
                     break;
                 case 6:
+                    PrimeNumbers primeNumbers = new PrimeNumbers();
+                    Console.WriteLine( "enter a number upto prime number:");
+                    int input = Convert.ToInt32(Console.ReadLine());
+                    for(int i = 0;i<= input;i++)
+                    {
+                        primeNumbers.PrimeNumbersBetweenTheRange(i);
+                    } 
+                    break;
+                 case 7:
+                    Opertion unorderListProblem = new Opertion();
+                    unorderListProblem.ReadFileAndPerformOperation(unOrderedPath);
+                    break;
+                case 8:
                     flag = false;
                     break;
             }
