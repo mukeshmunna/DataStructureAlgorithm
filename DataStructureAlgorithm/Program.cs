@@ -9,7 +9,7 @@ public class Program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("Enter a option \n1.BinarySearch \n2.Exit");
+            Console.WriteLine("Enter a option \n1.BinarySearch \n2.Anagram\n3.ReplaceString\n4.Exit");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
             {
@@ -22,6 +22,10 @@ public class Program
                     anagram.checkAnagram();
                     break;
                 case 3:
+                    ReplaceString replaceString = new ReplaceString();
+                    replaceString.replaceString();
+                    break;
+                case 4:
                     flag = false;
                     break;
             }
