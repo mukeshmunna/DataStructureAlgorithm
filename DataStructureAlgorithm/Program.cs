@@ -48,6 +48,19 @@ public class Program
                     } 
                     break;
                 case 7:
+                    PrimeAnagramPalidrome extend = new PrimeAnagramPalidrome();
+                    Console.WriteLine("Enter the range :");
+                    int range2 = Convert.ToInt32(Console.ReadLine());
+                    for (int i = 0; i < range2; i++)
+                    {
+                        if (extend.FindTheNumberIsPrime(i) && extend.PalindromeAnagram(i))
+                        {
+                            Console.Write(i + " ");
+                        }
+                    }
+                    Console.WriteLine("\n");
+                    break;
+                case 8:
                     flag = false;
                     break;
             }
