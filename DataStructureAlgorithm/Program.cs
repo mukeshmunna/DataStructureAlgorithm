@@ -18,6 +18,10 @@ public class Program
                     search.ReadTextFileAndSearch(searchFilePath);
                     break;
                 case 2:
+                    Anagram anagram = new Anagram();
+                    anagram.checkAnagram();
+                    break;
+                case 3:
                     flag = false;
                     break;
             }
