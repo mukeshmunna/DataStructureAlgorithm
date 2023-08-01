@@ -1,4 +1,5 @@
 ﻿using DataStructureAlgorithm;
+using DataStructureAlgorithm.Hashing;
 using DataStructureAlgorithm.UnorderedList;
 using DataStructureProblem;
 
@@ -63,6 +64,11 @@ public class Program
                     Console.WriteLine("\n");
                     break;
                 case 8:
+                    HashingOperation hashing = new HashingOperation();
+                    hashing.ReadFile(HashingFilePath);
+                    hashing.Display();
+                    break;
+                case 9:
                     flag = false;
                     break;
             }
